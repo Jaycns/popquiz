@@ -22,7 +22,7 @@ export default function Laga() {
 
           <p className="las">COMPUTER PROGRAMMING</p>
 
-          <p className="las">HTML AND JAVASCRIPT</p>
+          <p className="last">HTML AND JAVASCRIPT</p>
 
           <p className="btns">END TEST</p>
         </div>

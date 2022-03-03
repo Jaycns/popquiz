@@ -2,33 +2,37 @@ import { useEffect, useRef } from "react";
 import { React, useState } from "react";
 import "../App.css";
 import questions from "./questions";
-
-export default function Pull() {
+import Countdown from "./previous";
+export default function Pull(props) {
+  
   var length = questions.length;
   var position = Math.floor(Math.random() * length);
   var trop = questions[position];
-  const [add, setAdd] = useState(1);
+  const timer = useRef();
 
-  //   function usePrevious(value) {
-  //     const ref = useRef();
-  //     useEffect(() => {
-  //       ref.current = value;
-  //     }, [value]);
-  //     return ref.current;
-  //   }
-  function handleAdd() {
-    setAdd(add + 1);
+
+  const [add, setAdd] = useState(position);
+  const [rop, setTrop] = useState([]);
+  function handleAdd(event) {
+    setAdd((prevCount) => prevCount + 1);
+    event.preventDefault();
   }
   function handleMinus() {
-    setAdd(add - 1);
-
-    console.log(add);
+    setAdd((prevCount) => prevCount - 1);
+    trop = questions[position - 1];
   }
+  function handleChange(val) {
+    timer.current.innerHTML = val;
+  }
+
   return (
     <div className="boxes">
+      <Countdown handleTimer={handleChange} />
       <div className="bax">
         <div className="baxie">
-          <p>Time-left: 16min(s)</p>
+          <p>
+            Time-left: <span ref={timer}>20</span>min(s)
+          </p>
         </div>
         <div className="boxie">
           <h1>Question </h1>
@@ -47,29 +51,33 @@ export default function Pull() {
           <p>{trop.question}</p>
         </div>
         <div className="groupie">
-          <div className="zee">
+          <button>
             <div className="sez" />
-            <p>{trop.options.a}</p>
-          </div>
-          <div className="zee">
+            {trop.options.a}
+          </button>
+
+          <button>
             <div className="sez" />
-            <p>{trop.options.b}</p>
-          </div>
-          <div className="zee">
+            {trop.options.b}
+          </button>
+
+          <button>
             <div className="sez" />
-            <p>{trop.options.c}</p>
-          </div>
-          <div className="zee">
+            {trop.options.c}
+          </button>
+
+          <button>
             <div className="sez" />
-            <p>{trop.options.d}</p>
-          </div>
+            {trop.options.d}
+          </button>
         </div>
+
         <div className="zero">
           <button
             className="zin"
             style={{ visibility: add == 1 ? "hidden" : "visible" }}
             onClick={handleMinus}
-            onCheck={add == 1}
+            value={trop.id}
           >
             Previous
           </button>
@@ -78,6 +86,7 @@ export default function Pull() {
             onClick={handleAdd}
             style={{ visibility: add == 20 ? "hidden" : "visible" }}
             onCheck={add == 20}
+            value={trop.id}
           >
             Next
           </button>

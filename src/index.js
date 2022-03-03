@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import Field from "./components/field";
 import reportWebVitals from "./reportWebVitals";
+import Countdown from "./components/previous";
+
 
 ReactDOM.render(
   <React.StrictMode>
