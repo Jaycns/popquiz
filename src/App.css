@@ -107,6 +107,7 @@ body {
   padding: 0 12rem;
   height: 100%;
   align-items: center;
+  text-decoration: none;
 }
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -147,10 +148,38 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: center;
   cursor: pointer;
   transition: all 0.4s;
+  list-style: none;
+}
+.butn {
+  background: #ffdf5a;
+  border: 3px solid #c582d5;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  margin-left: 80%;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+.btn p {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none !important;
+}
+
+.butn p {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none !important;
+  outline: none;
 }
 .btn:hover {
   padding: 0.1rem 5rem;
   background-color: #fcecab;
+  text-decoration: none;
 }
 .mg5 {
   position: absolute;
@@ -426,8 +455,290 @@ input[type="number"]::-webkit-inner-spin-button {
   outline: none;
   transition: all 0.2s;
 }
-.groupie button:focus {
+.selected {
   background: #c582d5 !important;
   color: #fff !important;
-  
+}
+.navis {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 3rem 0 0.5rem 0;
+}
+.black {
+  display: flex;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.pagination img {
+  display: flex;
+  background: #ffdf5a;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 50%;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  bottom: -22px;
+}
+.surge {
+  display: flex;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.agination {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  position: absolute;
+  z-index: 3;
+  top: 90%;
+}
+.agination img {
+  display: flex;
+  background: #ffdf5a;
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 50%;
+  box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  bottom: -22px;
+}
+
+@media screen and (max-width: 900px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    top: 60%;
+    left: 61%;
+  }
+  .logobox {
+    width: 100%;
+    padding: 0;
+  }
+  .logbox img {
+  }
+  .house {
+    flex-direction: column;
+  }
+  .hause img {
+    margin: 0;
+    width: 6rem;
+    height: 6rem;
+  }
+  .hause h1 {
+    font-size: 1rem;
+  }
+  .las {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  .last {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    margin-top: 0.5rem;
+  }
+  .sag {
+    font-size: 0.5rem;
+  }
+  .btns {
+    font-size: 0.5rem;
+    padding: 0.1rem;
+  }
+  .formbox {
+    padding: 0rem;
+    left: 17%;
+  }
+  .quiz-app {
+    padding: 0;
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .popout {
+    right: auto;
+    width: 100%;
+  }
+  .butn {
+    font-size: 1rem;
+    padding: 1rem -1rem;
+  }
+  .bax {
+    padding: 1rem;
+  }
+  .baxie {
+    font-size: 0.9rem;
+    left: 2rem;
+  }
+  .boxie h1 {
+    font-size: 1rem;
+    padding-right: 0.3rem;
+  }
+
+  .boxie p {
+    font-size: 1rem;
+  }
+  .potie {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .pots {
+    font-size: 1rem;
+    min-height: 0;
+    padding: 0.5rem;
+  }
+  .groupie button {
+    font-size: 0.9rem;
+    height: 3rem;
+    padding: 0rem;
+  }
+  .sez {
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 1.5rem;
+  }
+  .zin {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .black {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+  .surge {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+  .agination img {
+    width: 2rem;
+    height: 2rem;
+    bottom: -7px;
+  }
+  .pagination img {
+    width: 2rem;
+    height: 2rem;
+    bottom: -7px;
+  }
+  .lagobox {
+    width: 100%;
+    padding: 0;
+  }
+  .lagox {
+    width: 80%;
+    left: 10%;
+  }
+  .lags {
+    margin: 0rem 0rem 3rem;
+  }
+  .bax {
+    margin-top: 0rem;
+  }
+  .navis {
+    margin: 0;
+  }
+  .mg3 {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  .mg4 {
+    position: absolute;
+    top: 1%;
+  }
+
+  .mg1 {
+    position: absolute;
+    top: 120%;
+    left: 9%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .box {
+    left: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .box {
+    left: 52%;
+  }
+}
+@media screen and (max-width: 683px) {
+  .box {
+    left: 56%;
+  }
+}
+@media screen and (max-width: 601px) {
+  .box {
+    left: 57%;
+  }
+}
+@media screen and (max-width: 507px) {
+  .box {
+    left: 61%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .box {
+    left: 62%;
+  }
+}
+@media screen and (max-width: 387px) {
+  .box {
+    left: 65%;
+  }
+}
+@media screen and (max-width: 355px) {
+  .box {
+    left: 67%;
+  }
+}
+@media screen and (max-width: 310px) {
+  .box {
+    left: 80%;
+  }
+}
+@media screen and (max-width: 275px) {
+  .box {
+    left: 85%;
+  }
 }

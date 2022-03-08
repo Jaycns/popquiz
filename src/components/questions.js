@@ -8,6 +8,7 @@ export default [
       c: "<strong>",
       d: "<dark>",
     },
+    selectedAnswer: "",
     answer: "<strong>",
   },
   {
@@ -19,6 +20,7 @@ export default [
       c: "Submit buttons",
       d: "All of the Above",
     },
+    selectedAnswer: "",
     answer: "All of the Above",
   },
   {
@@ -30,6 +32,7 @@ export default [
       c: "<BODY>",
       d: "<P>",
     },
+    selectedAnswer: "",
     answer: "<HTML>",
   },
   {
@@ -42,6 +45,7 @@ export default [
       c: "<id>",
       d: "<tr>",
     },
+    selectedAnswer: "",
     answer: "<id>",
   },
   {
@@ -53,6 +57,7 @@ export default [
       c: "Whole document",
       d: "Content",
     },
+    selectedAnswer: "",
     answer: "Whole document",
   },
   {
@@ -64,6 +69,7 @@ export default [
       c: 2,
       d: 3,
     },
+    selectedAnswer: "",
     answer: 0,
   },
   {
@@ -75,6 +81,7 @@ export default [
       c: "<jcscript>",
       d: "<javascript>",
     },
+    selectedAnswer: "",
     answer: "<script>",
   },
   {
@@ -86,6 +93,7 @@ export default [
       c: "External",
       d: "A and B",
     },
+    selectedAnswer: "",
     answer: "A and B",
   },
   {
@@ -97,6 +105,7 @@ export default [
       c: "<class>",
       d: "<span>",
     },
+    selectedAnswer: "",
     answer: "<div>",
   },
   {
@@ -108,6 +117,7 @@ export default [
       c: "Crossed data",
       d: "Overwritten data",
     },
+    selectedAnswer: "",
     answer: "Removed data",
   },
   {
@@ -119,6 +129,7 @@ export default [
       c: "object",
       d: "NaN",
     },
+    selectedAnswer: "",
     answer: "object",
   },
   {
@@ -131,6 +142,7 @@ export default [
       c: "<id>",
       d: "<special>",
     },
+    selectedAnswer: "",
     answer: "<id>",
   },
   {
@@ -142,6 +154,7 @@ export default [
       c: "Character",
       d: "Number",
     },
+    selectedAnswer: "",
     answer: "Number",
   },
   {
@@ -153,6 +166,7 @@ export default [
       c: "Blue",
       d: "Green",
     },
+    selectedAnswer: "",
     answer: "Blue",
   },
   {
@@ -164,6 +178,7 @@ export default [
       c: "Updation",
       d: "Length retrieving",
     },
+    selectedAnswer: "",
     answer: "Insertion",
   },
   {
@@ -175,6 +190,7 @@ export default [
       c: "<script>",
       d: "<js>",
     },
+    selectedAnswer: "",
     answer: "<script>",
   },
   {
@@ -186,6 +202,7 @@ export default [
       c: "-",
       d: "?:",
     },
+    selectedAnswer: "",
     answer: "?:",
   },
   {
@@ -197,6 +214,7 @@ export default [
       c: "FirstAndLast",
       d: "None of the above",
     },
+    selectedAnswer: "",
     answer: "2names",
   },
   {
@@ -209,6 +227,7 @@ export default [
       c: "delete",
       d: "typeof",
     },
+    selectedAnswer: "",
     answer: "this",
   },
   {
@@ -221,6 +240,7 @@ export default [
       c: "ParseFloat",
       d: "Efloat",
     },
+    selectedAnswer: "",
     answer: "Eval",
   },
   {
@@ -233,6 +253,7 @@ export default [
       c: "onclick",
       d: "ondbclick",
     },
+    selectedAnswer: "",
     answer: "onblur",
   },
   {
@@ -244,6 +265,7 @@ export default [
       c: "Switch",
       d: "For",
     },
+    selectedAnswer: "",
     answer: "If",
   },
   {
@@ -256,6 +278,7 @@ export default [
       c: "Slice",
       d: "Splice",
     },
+    selectedAnswer: "",
     answer: "Splice",
   },
   {
@@ -267,6 +290,7 @@ export default [
       c: "Client",
       d: "FileUpload",
     },
+    selectedAnswer: "",
     answer: "FileUpload",
   },
   {
@@ -278,6 +302,7 @@ export default [
       c: 7,
       d: 78,
     },
+    selectedAnswer: "",
     answer: 78,
   },
   {
@@ -289,6 +314,7 @@ export default [
       c: "program",
       d: "short",
     },
+    selectedAnswer: "",
     answer: "program",
   },
   {
@@ -300,6 +326,7 @@ export default [
       c: "Declaration statements",
       d: "Prototypes",
     },
+    selectedAnswer: "",
     answer: "Declaration statements",
   },
   {
@@ -312,6 +339,7 @@ export default [
       c: "The two of the above",
       d: "None of the above",
     },
+    selectedAnswer: "",
     answer: "The local element",
   },
   {
@@ -324,6 +352,7 @@ export default [
       c: "Division by zero",
       d: "Missing of Bracket",
     },
+    selectedAnswer: "",
     answer: "Division by zero",
   },
   {
@@ -336,6 +365,7 @@ export default [
       c: "if(a!null)",
       d: "if(a!=null)",
     },
+    selectedAnswer: "",
     answer: "if(a!==null)",
   },
 ];

@@ -3,27 +3,50 @@ import { React, useState } from "react";
 import "../App.css";
 import questions from "./questions";
 import Countdown from "./previous";
-export default function Pull(props) {
-  
-  var length = questions.length;
-  var position = Math.floor(Math.random() * length);
-  var trop = questions[position];
+import Pagination from "./pagination";
+
+export default function Pull() {
+  const length = questions.length;
+  // var position = Math.floor(Math.random() * length);
+  let trop = {};
   const timer = useRef();
 
+  const [questionList, setQuestionList] = useState(() => [getQuestion()]);
 
-  const [add, setAdd] = useState(position);
-  const [rop, setTrop] = useState([]);
-  function handleAdd(event) {
-    setAdd((prevCount) => prevCount + 1);
-    event.preventDefault();
+  function getQuestion() {
+    const newIndex = Math.floor(Math.random() * length);
+    const question = questions[newIndex];
+    return question;
   }
+
+  const [add, setAdd] = useState(1);
+
+  function handleAdd() {
+    const question = getQuestion();
+    setQuestionList([...questionList, question]);
+    setAdd((prevCount) => prevCount + 1);
+  }
+
   function handleMinus() {
     setAdd((prevCount) => prevCount - 1);
-    trop = questions[position - 1];
   }
+
   function handleChange(val) {
     timer.current.innerHTML = val;
   }
+
+  function setAnswer(answer) {
+    const index = questionList.findIndex((question) => question.id === trop.id);
+    const newQuestion = JSON.parse(JSON.stringify(questionList));
+    newQuestion[index].selectedAnswer = answer;
+
+    setQuestionList(newQuestion);
+   // console.log(questionList);
+  }
+
+  trop = questionList[add - 1];
+  const questionsPerPage = 1;
+  const totalQuestions = 20;
 
   return (
     <div className="boxes">
@@ -51,24 +74,44 @@ export default function Pull(props) {
           <p>{trop.question}</p>
         </div>
         <div className="groupie">
-          <button>
+          <button
+            className={
+              trop.selectedAnswer === trop?.options?.a ? "selected" : ""
+            }
+            onClick={() => setAnswer(trop?.options?.a)}
+          >
             <div className="sez" />
-            {trop.options.a}
+            {trop?.options?.a}
           </button>
 
-          <button>
+          <button
+            className={
+              trop.selectedAnswer === trop?.options?.b ? "selected" : ""
+            }
+            onClick={() => setAnswer(trop?.options?.b)}
+          >
             <div className="sez" />
-            {trop.options.b}
+            {trop?.options?.b}
           </button>
 
-          <button>
+          <button
+            className={
+              trop.selectedAnswer === trop?.options?.c ? "selected" : ""
+            }
+            onClick={() => setAnswer(trop?.options?.c)}
+          >
             <div className="sez" />
-            {trop.options.c}
+            {trop?.options?.c}
           </button>
 
-          <button>
+          <button
+            className={
+              trop.selectedAnswer === trop?.options?.d ? "selected" : ""
+            }
+            onClick={() => setAnswer(trop?.options?.d)}
+          >
             <div className="sez" />
-            {trop.options.d}
+            {trop?.options?.d}
           </button>
         </div>
 
@@ -77,7 +120,6 @@ export default function Pull(props) {
             className="zin"
             style={{ visibility: add == 1 ? "hidden" : "visible" }}
             onClick={handleMinus}
-            value={trop.id}
           >
             Previous
           </button>
@@ -85,11 +127,18 @@ export default function Pull(props) {
             className="zin"
             onClick={handleAdd}
             style={{ visibility: add == 20 ? "hidden" : "visible" }}
-            onCheck={add == 20}
-            value={trop.id}
           >
             Next
           </button>
+          <Pagination
+            totalQuestions={totalQuestions}
+            questionsPerPage={questionsPerPage}
+            add={add}
+            question={questionList}
+            setQuestionList={setQuestionList}
+            handleAdd={handleAdd}
+            handleMinus={handleMinus}
+          />
         </div>
       </div>
     </div>

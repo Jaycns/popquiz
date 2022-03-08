@@ -2,8 +2,8 @@ import React, {useState, useEffect, useRef} from "react";
 
 
 function Countdown({handleTimer}) {
-    var [counter, setCounter] = useState(null)
-    const [minLeft, setMinLeft] = useState(20)
+    
+
 //   const countDate = new Date("May 17, 2022 00:00:00");
 //   const now = new Date().getTime();
 //   const gap = countDate - now;
@@ -18,6 +18,7 @@ function Countdown({handleTimer}) {
 //   const textMinute = Math.floor(gap % hour) / minute;
 //   const textSecond = Math.floor(gap % minute) / second;
 //  console.log(textMinute);
+var [counter, setCounter] = useState(null);
 const timer = useRef(0)
 
     useEffect(() => {
@@ -27,7 +28,6 @@ const timer = useRef(0)
                 timer.current.innerHTML -= 1;
                 handleTimer(timer.current.innerHTML)
             }
-        
         }, 60000);
         setCounter(min)
 
