@@ -133,7 +133,7 @@ export default function Pull() {
             totalQuestions={totalQuestions}
             questionsPerPage={questionsPerPage}
             add={add}
-            question={questionList}
+            quest={questionList}
             setQuestionList={setQuestionList}
             handleAdd={handleAdd}
             handleMinus={handleMinus}

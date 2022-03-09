@@ -7,7 +7,7 @@ export default function Pagination({
   totalQuestions,
   questionsPerPage,
   add,
-  question,
+  quest,
   setQuestionList,
   handleAdd,
   handleMinus,
@@ -28,7 +28,7 @@ export default function Pagination({
 
   let nextArray = [];
   for (let i = 11; i <= 20; i++) nextArray.push(i);
-  console.log(question);
+  console.log(quest);
   return (
     <div className="navis">
       <div
@@ -38,7 +38,7 @@ export default function Pagination({
         {[...Array(10).keys()].map((item, index) => {
           return (
             <p
-              className={question[item]?.selectedAnswer ? "surge" : "black"}
+              className={quest[item]?.selectedAnswer ? "surge" : "black"}
               key={index}
             >
               {item + 1}
@@ -55,7 +55,7 @@ export default function Pagination({
         {nextArray.map((item, index) => {
           return (
             <p
-              className={question[item - 1]?.selectedAnswer ? "surge" : "black"}
+              className={quest[item - 1]?.selectedAnswer ? "surge" : "black"}
               key={index}
             >
               {item}
