@@ -6,7 +6,7 @@ function Logo() {
   return (
     <div className="logobox">
       <div className="house">
-        <img src={logo} />
+        <img src={logo} alt="picer" />
         <h1>Faculty of Engineering And Technology</h1>
         <div className="quiz-app">
           <p>Quiz App</p>

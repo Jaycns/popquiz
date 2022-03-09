@@ -1,4 +1,4 @@
-export default [
+const questions = [
   {
     id: 1,
     question: "in HTML, a tag used as an alternative to make text bold is",
@@ -369,3 +369,4 @@ export default [
     answer: "if(a!==null)",
   },
 ];
+export default questions;

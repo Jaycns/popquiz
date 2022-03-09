@@ -3,7 +3,6 @@ import Header from "./header";
 import "../App.css";
 import { useState } from "react";
 import Popoff from "./popup";
-import { Link } from "react-router-dom";
 function Form() {
   const [pop, setPop] = useState(false);
   const [names, setNames] = useState("");

@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import { FiXCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
 function Popoff(props) {
-  const [stext, setsText] = useState("");
-  function handleChanges() {
-    setsText(props.names);
-    console.log(stext);
-  }
+
   return (
     <div style={{ display: props.pop ? "block" : "none" }} className="popout">
       <FiXCircle className="paps" onClick={props.handleChange} />
@@ -21,7 +17,7 @@ function Popoff(props) {
             Please do not click submit or end test unless you are sure of
             submitting
           </li>
-          <li>Your examination ID is {props.handleName}.</li>
+          <li>Your examination ID is .</li>
           <li>
             Any form of malpractice would render your test nullified, stick to
             the rules. GOOD LUCK!

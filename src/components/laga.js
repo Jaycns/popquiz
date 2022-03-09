@@ -7,7 +7,7 @@ export default function Laga() {
     <div className="lagobox">
       <div className="lagox">
         <div className="hause">
-          <img src={logo} alt="" />
+          <img src={logo} alt="picser" />
           <h1>Faculty of Engineering And Technology</h1>
         </div>
         <div className="lags">

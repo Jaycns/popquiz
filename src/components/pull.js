@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { React, useState } from "react";
 import "../App.css";
 import questions from "./questions";
@@ -34,14 +34,13 @@ export default function Pull() {
   function handleChange(val) {
     timer.current.innerHTML = val;
   }
-
   function setAnswer(answer) {
     const index = questionList.findIndex((question) => question.id === trop.id);
     const newQuestion = JSON.parse(JSON.stringify(questionList));
     newQuestion[index].selectedAnswer = answer;
 
     setQuestionList(newQuestion);
-   // console.log(questionList);
+    // console.log(questionList);
   }
 
   trop = questionList[add - 1];
@@ -118,7 +117,7 @@ export default function Pull() {
         <div className="zero">
           <button
             className="zin"
-            style={{ visibility: add == 1 ? "hidden" : "visible" }}
+            style={{ visibility: add === 1 ? "hidden" : "visible" }}
             onClick={handleMinus}
           >
             Previous
@@ -126,7 +125,7 @@ export default function Pull() {
           <button
             className="zin"
             onClick={handleAdd}
-            style={{ visibility: add == 20 ? "hidden" : "visible" }}
+            style={{ visibility: add === 20 ? "hidden" : "visible" }}
           >
             Next
           </button>

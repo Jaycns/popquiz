@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Surge from "../images/surge.svg";
 import Nosurge from "../images/no_surge.svg";
 import "../App.css";
-import questions from "./questions";
 
 export default function Pagination({
   totalQuestions,
@@ -28,7 +27,7 @@ export default function Pagination({
   }
 
   let nextArray = [];
-  for (let i = 11; i <= 20; i++) nextArray.push(i)
+  for (let i = 11; i <= 20; i++) nextArray.push(i);
   console.log(question);
   return (
     <div className="navis">
@@ -46,13 +45,13 @@ export default function Pagination({
             </p>
           );
         })}
-        <img src={Nosurge} onClick={handleAdd}></img>
+        <img src={Nosurge} alt="flash pass" onClick={handleAdd}></img>
       </div>
       <div
         className="pagination"
         style={{ visibility: add > 10 ? "visible" : "hidden" }}
       >
-        <img src={Surge} onClick={handleMinus}></img>
+        <img src={Surge} alt="flash pass" onClick={handleMinus}></img>
         {nextArray.map((item, index) => {
           return (
             <p

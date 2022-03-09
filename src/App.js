@@ -13,13 +13,13 @@ import yellow from "./images/yellow_circle.png";
 function App() {
   return (
     <div className="ent">
-      <img src={circle} className="mg1" />
-      <img src={half} className="mg2" />
-      <img src={big} className="mg3" />
-      <img src={purple} className="mg4" />
-      <img src={spiral} className="mg5" />
-      <img src={yellow} className="mg6" />
-      
+      <img src={circle} alt="pic here" className="mg1" />
+      <img src={half} alt="pic here" className="mg2" />
+      <img src={big} alt="pic here" className="mg3" />
+      <img src={purple} alt="pic here" className="mg4" />
+      <img src={spiral} alt="pic here" className="mg5" />
+      <img src={yellow} alt="pic here" className="mg6" />
+
       <div className="box">
         <Form />
         <Logo />

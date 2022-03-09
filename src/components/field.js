@@ -13,12 +13,12 @@ import yellow from "../images/yellow_circle.png";
 function Field() {
   return (
     <div className="ent">
-      <img src={circle} className="mg1" alt="" />
-      <img src={half} className="mg2" alt="" />
-      <img src={big} className="mg3" alt="" />
-      <img src={purple} className="mg4" alt="" />
-      <img src={spiral} className="mg5" alt="" />
-      <img src={yellow} className="mg6" alt="" />
+      <img src={circle} className="mg1" alt="my little pic" />
+      <img src={half} className="mg2" alt="my little pic" />
+      <img src={big} className="mg3" alt="my little pic" />
+      <img src={purple} className="mg4" alt="my little pic" />
+      <img src={spiral} className="mg5" alt="my little pic" />
+      <img src={yellow} className="mg6" alt="my little pic" />
 
       <div className="box">
         <Pull />
