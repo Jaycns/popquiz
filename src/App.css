@@ -555,10 +555,18 @@ input[type="number"]::-webkit-inner-spin-button {
   .house {
     flex-direction: column;
   }
+  .house img {
+    margin: 0;
+    width: 6rem;
+    height: 6rem;
+  }
   .hause img {
     margin: 0;
     width: 6rem;
     height: 6rem;
+  }
+  .house h1 {
+    font-size: 1rem;
   }
   .hause h1 {
     font-size: 1rem;
@@ -575,6 +583,13 @@ input[type="number"]::-webkit-inner-spin-button {
   .sag {
     font-size: 0.5rem;
   }
+  .butn {
+    padding: 0.3rem 3rem;
+    font-size: 0.4rem;
+    margin-left: 0;
+    position: relative;
+    left: 75%;
+  }
   .btns {
     font-size: 0.5rem;
     padding: 0.1rem;
@@ -585,19 +600,33 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   .quiz-app {
     padding: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  .passport {
+    width: 8rem;
+    bottom: 70%;
+    left: 35%;
+  }
+  .headerbox p {
+    font-size: 1.2rem;
+  }
+  .headerbox {
+    padding: 3rem 0rem 1rem 3rem;
+  }
+  .formbox input {
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 3rem;
   }
   .btn {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    width: 100%;
+    margin: 1rem;
+    padding: 0;
   }
   .popout {
     right: auto;
     width: 100%;
-  }
-  .butn {
-    font-size: 1rem;
-    padding: 1rem -1rem;
   }
   .bax {
     padding: 1rem;
@@ -691,10 +720,40 @@ input[type="number"]::-webkit-inner-spin-button {
     top: 120%;
     left: 9%;
   }
+  .poper {
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1rem;
+  }
+  .popout {
+    bottom: 25%;
+  }
+  .paps {
+    font-size: 1rem;
+  }
+  .pops {
+    padding-bottom: 0rem;
+  }
+  .pops h1 {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 1500px) {
   .box {
     left: 50%;
+  }
+  .btn {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 1rem;
+    padding: 0;
+  }
+  .butn {
+    padding: 0.3rem 1rem;
+    font-size: 0.4rem;
+    margin-left: 0;
+    position: relative;
+    left: 75%;
   }
 }
 @media screen and (max-width: 900px) {
