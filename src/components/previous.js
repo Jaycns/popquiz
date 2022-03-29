@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function Countdown(handleTimer) {
+function Countdown({ handleTimer }) {
   //   const countDate = new Date("May 17, 2022 00:00:00");
   //   const now = new Date().getTime();
   //   const gap = countDate - now;
@@ -18,14 +18,14 @@ function Countdown(handleTimer) {
   var [counter, setCounter] = useState(null);
   const timer = useRef(0);
   console.log(counter);
-  useEffect((handleTimer) => {
+  useEffect(() => {
     timer.current.innerHTML = 20;
     let min = setInterval(() => {
-      if (timer.current.innerHTML !== 0) {
+      if (timer.current.innerHTML != 0) {
         timer.current.innerHTML -= 1;
         handleTimer(timer.current.innerHTML);
       }
-    }, 60000);
+    }, 6000);
     setCounter(min);
 
     return () => {
