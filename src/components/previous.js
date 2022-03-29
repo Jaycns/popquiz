@@ -24,14 +24,14 @@ function Countdown({ handleTimer }) {
       if (timer.current.innerHTML !== 0) {
         timer.current.innerHTML -= 1;
         handleTimer(timer.current.innerHTML);
+        setCounter(min);
       }
     }, 6000);
-    setCounter(min);
 
     return () => {
       clearInterval(min);
     };
-  });
+  }, []);
 
   return (
     <h1 ref={timer} style={{ display: "none" }}>
