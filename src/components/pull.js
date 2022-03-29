@@ -1,15 +1,13 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { React, useState } from "react";
 import "../App.css";
 import questions from "./questions";
-import Countdown from "./previous";
 import Pagination from "./pagination";
 
 export default function Pull() {
   const length = questions.length;
   // var position = Math.floor(Math.random() * length);
   let trop = {};
-  const timer = useRef();
 
   const [questionList, setQuestionList] = useState(() => [getQuestion()]);
 
@@ -30,10 +28,25 @@ export default function Pull() {
   function handleMinus() {
     setAdd((prevCount) => prevCount - 1);
   }
-
-  function handleChange(val) {
-    timer.current.innerHTML = val;
-  }
+  var [counter, setCounter] = useState(null);
+  const timer = useRef(0);
+  console.log(counter);
+  useEffect(() => {
+    timer.current.innerHTML = 20;
+    let min = setInterval(() => {
+      const handleTimer = (val) => {
+        timer.current.innerHTML = val;
+      };
+      if (timer.current.innerHTML !== 0) {
+        timer.current.innerHTML -= 1;
+        handleTimer(timer.current.innerHTML);
+      }
+    }, 6000);
+    setCounter(min);
+    return () => {
+      clearInterval(min);
+    };
+  }, []);
   function setAnswer(answer) {
     const index = questionList.findIndex((question) => question.id === trop.id);
     const newQuestion = JSON.parse(JSON.stringify(questionList));
@@ -49,7 +62,6 @@ export default function Pull() {
 
   return (
     <div className="boxes">
-      <Countdown handleTimer={handleChange} />
       <div className="bax">
         <div className="baxie">
           <p>

@@ -15,23 +15,7 @@ function Countdown({ handleTimer }) {
   //   const textMinute = Math.floor(gap % hour) / minute;
   //   const textSecond = Math.floor(gap % minute) / second;
   //  console.log(textMinute);
-  var [counter, setCounter] = useState(null);
-  const timer = useRef(0);
-  console.log(counter);
-  useEffect(() => {
-    timer.current.innerHTML = 20;
-    let min = setInterval(() => {
-      if (timer.current.innerHTML !== 0) {
-        timer.current.innerHTML -= 1;
-        handleTimer(timer.current.innerHTML);
-        setCounter(min);
-      }
-    }, 6000);
-
-    return () => {
-      clearInterval(min);
-    };
-  }, []);
+  
 
   return (
     <h1 ref={timer} style={{ display: "none" }}>
