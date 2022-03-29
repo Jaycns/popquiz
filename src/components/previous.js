@@ -21,7 +21,7 @@ function Countdown({ handleTimer }) {
   useEffect(() => {
     timer.current.innerHTML = 20;
     let min = setInterval(() => {
-      if (timer.current.innerHTML != 0) {
+      if (timer.current.innerHTML !== 0) {
         timer.current.innerHTML -= 1;
         handleTimer(timer.current.innerHTML);
       }
