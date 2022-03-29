@@ -31,7 +31,7 @@ function Countdown({ handleTimer }) {
     return () => {
       clearInterval(min);
     };
-  }, []);
+  });
 
   return (
     <h1 ref={timer} style={{ display: "none" }}>
