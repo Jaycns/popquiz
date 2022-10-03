@@ -608,11 +608,11 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 0.5rem;
   }
   .butn {
-    padding: 0.3rem 3rem;
-    font-size: 0.4rem;
+    padding: 0.3rem 1rem;
+    font-size: 8px;
     margin-left: 0;
     position: relative;
-    left: 75%;
+    left: 60%;
   }
   .btns {
     font-size: 0.5rem;
@@ -705,12 +705,8 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 0.6rem;
     gap: 2px;
   }
+  
   .agination img {
-    width: 2rem;
-    height: 2rem;
-    bottom: -7px;
-  }
-  .pagination img {
     width: 2rem;
     height: 2rem;
     bottom: -7px;
