@@ -1,6 +1,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -416,8 +421,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 1rem;
   width: 60%;
   text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 1rem auto;
   font-size: 1.5rem;
   text-transform: uppercase;
   background: #000;
@@ -569,10 +573,12 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     top: 60%;
     left: 61%;
+    border-radius: 0rem;
   }
   .logobox {
     width: 100%;
     padding: 0;
+    border-radius: 0rem !important;
   }
   .logbox img {
   }
@@ -598,14 +604,16 @@ input[type="number"]::-webkit-inner-spin-button {
   .las {
     font-size: 0.8rem;
     padding: 0;
+    width: 15rem;
   }
   .last {
     font-size: 0.8rem;
-    padding: 0.1rem;
+    width: 15rem;
+    padding: 0.4rem 0.1rem;
     margin-top: 0.5rem;
   }
   .sag {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .butn {
     padding: 0.3rem 1rem;
@@ -615,8 +623,9 @@ input[type="number"]::-webkit-inner-spin-button {
     left: 60%;
   }
   .btns {
-    font-size: 0.5rem;
-    padding: 0.1rem;
+    font-size: 8px;
+    padding: 0.6rem 0.8rem;
+    width: 8rem;
   }
   .formbox {
     padding: 0rem;
@@ -705,7 +714,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 0.6rem;
     gap: 2px;
   }
-  
+
   .agination img {
     width: 2rem;
     height: 2rem;
@@ -714,6 +723,7 @@ input[type="number"]::-webkit-inner-spin-button {
   .lagobox {
     width: 100%;
     padding: 0;
+    border-radius: 0;
   }
   .lagox {
     width: 80%;
@@ -732,12 +742,15 @@ input[type="number"]::-webkit-inner-spin-button {
     position: absolute;
     bottom: 0%;
     left: 0%;
+    width: 30px;
   }
   .mg4 {
     position: absolute;
     top: 1%;
   }
-
+  .mg5 {
+    width: 30px;
+  }
   .mg1 {
     position: absolute;
     top: 120%;
@@ -765,6 +778,8 @@ input[type="number"]::-webkit-inner-spin-button {
 @media screen and (max-width: 900px) {
   .box {
     left: 52%;
+    height: 100vh;
+    width: 100%;
   }
 }
 @media screen and (max-width: 683px) {

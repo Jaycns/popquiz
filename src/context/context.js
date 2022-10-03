@@ -38,6 +38,7 @@ export function AppProvider(props) {
   const handleNavChange = (e) => {
     setCurrentPage(Number(e.target.getAttribute("id")));
   };
+  const phoneMedia = window.matchMedia("(max-width: 768px)").matches;
   const stateActions = {
     handlePrev,
     handleNext,
@@ -58,6 +59,7 @@ export function AppProvider(props) {
         pop,
         idName,
         id,
+        phoneMedia,
         ...stateActions,
       }}
     >
