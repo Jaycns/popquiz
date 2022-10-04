@@ -1,11 +1,6 @@
 html {
   font-size: 62.5%;
 }
-@media (max-width: 768px) {
-  html {
-    font-size: 67%;
-  }
-}
 body {
   margin: 0;
   padding: 0;
@@ -573,7 +568,7 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     top: 60%;
     left: 61%;
-    border-radius: 0rem;
+    border-radius: 1rem;
   }
   .logobox {
     width: 100%;
@@ -778,8 +773,6 @@ input[type="number"]::-webkit-inner-spin-button {
 @media screen and (max-width: 900px) {
   .box {
     left: 52%;
-    height: 100vh;
-    width: 100%;
   }
 }
 @media screen and (max-width: 683px) {
