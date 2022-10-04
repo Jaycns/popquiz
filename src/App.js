@@ -18,6 +18,9 @@ function App() {
         <img src={purple} alt="pic here" className="mg4" />
         <img src={spiral} alt="pic here" className="mg5" />
         <img src={yellow} alt="pic here" className="mg6" />
+        <div className="footer">
+          <p>Designed by © Jaycn</p>
+        </div>
       </div>
       <div className="box">
         <Form />

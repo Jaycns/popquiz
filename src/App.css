@@ -567,9 +567,23 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translate(-60%,0);
+    transform: translate(-65%, -3%);
     left: 0;
     border-radius: 1rem;
+  }
+  .boxes {
+    padding-top: 2rem;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 10rem;
+  }
+  .footer p {
+    opacity: 0.4;
   }
   .logobox {
     width: 100%;
@@ -749,7 +763,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   .mg1 {
     position: absolute;
-    top: 120%;
+    top: 10%;
     left: 9%;
   }
   .poper {
