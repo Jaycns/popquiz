@@ -5,12 +5,7 @@ import "../App.css";
 import AppContext from "../context/context";
 
 export default function Pagination() {
-  const pageNumber = [];
   const { questions, handleNavChange } = useContext(AppContext);
-  const totalQuestions = 30;
-  for (let i = 20; i <= totalQuestions / 1; i++) {
-    pageNumber.push(i);
-  }
   let lastArray = [];
   for (let i = 1; i <= 30; i++) lastArray.push(i);
   const [currentNav, setCurrentNav] = useState(1);

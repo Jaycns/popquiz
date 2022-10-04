@@ -221,6 +221,25 @@ input[type="number"]::-webkit-inner-spin-button {
   box-shadow: 0 1.2rem 3.2rem rgb(0 0 0 / 20%);
   border-radius: 15px;
 }
+.popout.end {
+  width: 80rem;
+  right: 0;
+  left: 0;
+  top: 10%;
+  margin: auto;
+  height: 25rem;
+}
+.poper.end {
+  text-align: center;
+}
+.btn-holder {
+  /* margin-left: -16rem; */
+  margin: auto;
+  text-align: center;
+}
+.btn-holder button {
+  margin: 0 0.5rem;
+}
 .paps {
   font-size: 2.5rem;
   position: absolute;
@@ -299,6 +318,19 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 500;
   margin-bottom: 4rem;
   overflow: auto;
+}
+.footer {
+  position: absolute;
+  bottom: 1%;
+  z-index: 300;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 24rem;
+}
+.footer p {
+  opacity: 0.4;
+  font-size: 24px;
 }
 
 .zero {
@@ -567,7 +599,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     position: relative;
-    transform: translate(-65%, -3%);
+    transform: translate(-66.5%, -3%);
     left: 0;
     border-radius: 1rem;
   }
@@ -576,14 +608,15 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   .footer {
     position: absolute;
-    bottom: 0%;
+    bottom: 1%;
     right: 0;
     left: 0;
     margin: auto;
-    width: 10rem;
+    width: 16rem;
   }
   .footer p {
     opacity: 0.4;
+    font-size: 16px;
   }
   .logobox {
     width: 100%;
@@ -673,6 +706,14 @@ input[type="number"]::-webkit-inner-spin-button {
   .popout {
     right: auto;
     width: 100%;
+  }
+  .popout.end {
+    height: 12rem;
+    width: 30rem;
+  }
+  .btn-holder {
+    margin-left: -16rem;
+    text-align: left;
   }
   .bax {
     padding: 1rem;
@@ -765,6 +806,9 @@ input[type="number"]::-webkit-inner-spin-button {
     position: absolute;
     top: 10%;
     left: 9%;
+  }
+  .mg6 {
+    bottom: 2%;
   }
   .poper {
     font-size: 1rem;

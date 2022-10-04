@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import question from "./questions";
 import "../App.css";
 import Pully from "./pully";
@@ -9,22 +9,31 @@ import big from "../images/big_circle.png";
 import purple from "../images/purple_circle.png";
 import spiral from "../images/spiral.png";
 import yellow from "../images/yellow_circle.png";
+import EndPop from "./endpop";
 function Field() {
+  const [pop, setPop] = useState(false);
+  const handleOpen = () => setPop(true);
+  const handleClose = () => setPop(false);
+
   return (
-    <div className="ent">
-      <>
+    <>
+      {pop && <EndPop handleClose={handleClose} />}
+      <div className="ent">
         <img src={circle} className="mg1" alt="my little pic" />
         <img src={half} className="mg2" alt="my little pic" />
         <img src={big} className="mg3" alt="my little pic" />
         <img src={purple} className="mg4" alt="my little pic" />
         <img src={spiral} className="mg5" alt="my little pic" />
         <img src={yellow} className="mg6" alt="my little pic" />
-      </>
+        <div className="footer">
+          <p>Designed by © Jaycn</p>
+        </div>
+      </div>
       <div className="box">
         <Pully />
-        <Laga />
+        <Laga handleOpen={handleOpen} />
       </div>
-    </div>
+    </>
   );
 }
 export default React.memo(Field);

@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import logo from "../images/school_logo.png";
 
-export default function Laga() {
+export default function Laga({ handleOpen }) {
   const d = new Date();
   const hours = d.getHours();
   const minutes = d.getMinutes();
@@ -30,7 +30,9 @@ export default function Laga() {
 
           <p className="last">HTML AND JAVASCRIPT</p>
 
-          <p className="btns">END TEST</p>
+          <p className="btns" onClick={handleOpen}>
+            END TEST
+          </p>
         </div>
       </div>
     </div>
