@@ -566,8 +566,9 @@ input[type="number"]::-webkit-inner-spin-button {
   .box {
     display: flex;
     flex-direction: column;
-    top: 60%;
-    left: 61%;
+    position: relative;
+    transform: translate(-60%,0);
+    left: 0;
     border-radius: 1rem;
   }
   .logobox {
