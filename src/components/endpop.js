@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
+import AppContext from "../context/context";
 
-function EndPop({ handleClose }) {
+function EndPop() {
+  const { handleThankPop, handleClose } = useContext(AppContext);
+
   return (
     <div className="popout end">
       <div className="pops">
@@ -12,9 +14,10 @@ function EndPop({ handleClose }) {
         <p>Are you sure you want to end this exam?</p>
       </div>
       <div className="btn-holder">
-        <Link to="/">
-          <button className="butn">Yes</button>
-        </Link>
+        <button className="butn" onClick={handleThankPop}>
+          Yes
+        </button>
+
         <button className="butn" onClick={handleClose}>
           No
         </button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 // import question from "./questions";
 import "../App.css";
 import Pully from "./pully";
@@ -10,14 +10,15 @@ import purple from "../images/purple_circle.png";
 import spiral from "../images/spiral.png";
 import yellow from "../images/yellow_circle.png";
 import EndPop from "./endpop";
-function Field() {
-  const [pop, setPop] = useState(false);
-  const handleOpen = () => setPop(true);
-  const handleClose = () => setPop(false);
+import ThankPop from "./thankpop";
+import AppContext from "../context/context";
 
+function Field() {
+  const { thankPops, pops } = useContext(AppContext);
   return (
     <>
-      {pop && <EndPop handleClose={handleClose} />}
+      {thankPops && <ThankPop />}
+      {pops && <EndPop />}
       <div className="ent">
         <img src={circle} className="mg1" alt="my little pic" />
         <img src={half} className="mg2" alt="my little pic" />
@@ -31,7 +32,7 @@ function Field() {
       </div>
       <div className="box">
         <Pully />
-        <Laga handleOpen={handleOpen} />
+        <Laga />
       </div>
     </>
   );

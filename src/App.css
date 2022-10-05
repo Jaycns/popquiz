@@ -74,6 +74,7 @@ body {
   width: 73%;
   padding: 4rem 0 2rem 0;
 }
+
 .headerbox {
   background: rgba(255, 223, 90, 0.4);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -98,6 +99,18 @@ body {
   bottom: 35%;
   left: 40%;
   width: 12rem;
+}
+.passport.pop {
+  position: relative;
+  left: 0;
+  margin-top: -4rem;
+}
+.blur {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 98;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .formbox {
   position: relative;
@@ -213,7 +226,7 @@ input[type="number"]::-webkit-inner-spin-button {
   right: 12%;
   bottom: 20%;
   width: 75%;
-  z-index: 3;
+  z-index: 99;
   padding: 1.5rem 2rem;
   background: #fff;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
@@ -229,6 +242,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: auto;
   height: 25rem;
 }
+
 .poper.end {
   text-align: center;
 }
@@ -577,6 +591,9 @@ input[type="number"]::-webkit-inner-spin-button {
   .box {
     left: 50%;
   }
+  .footer {
+    display: none;
+  }
   .btn {
     font-size: 1.2rem;
     width: 16rem;
@@ -712,6 +729,13 @@ input[type="number"]::-webkit-inner-spin-button {
     height: 12rem;
     width: 30rem;
   }
+  .poper.end p {
+    line-height: 1.4rem;
+  }
+  .popout.end.thank {
+    height: 14.8rem;
+  }
+
   .btn-holder {
     margin-left: -16rem;
     text-align: left;

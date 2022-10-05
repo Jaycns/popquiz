@@ -38,6 +38,15 @@ export function AppProvider(props) {
   const handleNavChange = (e) => {
     setCurrentPage(Number(e.target.getAttribute("id")));
   };
+  const [pops, setPops] = useState(false);
+  const handleOpen = () => setPops(true);
+  const handleClose = () => setPops(false);
+  const [thankPops, setThankPops] = useState(false);
+  const handleThankPop = () => {
+    setThankPops(true);
+    setPops(false);
+  };
+  const handleCloseThankPop = () => setThankPops(false);
   const phoneMedia = window.matchMedia("(max-width: 768px)").matches;
   const stateActions = {
     handlePrev,
@@ -47,6 +56,10 @@ export function AppProvider(props) {
     openPop,
     handleChange,
     handleNavChange,
+    handleThankPop,
+    handleCloseThankPop,
+    handleOpen,
+    handleClose,
   };
   return (
     <AppContext.Provider
@@ -60,6 +73,8 @@ export function AppProvider(props) {
         idName,
         id,
         phoneMedia,
+        thankPops,
+        pops,
         ...stateActions,
       }}
     >
