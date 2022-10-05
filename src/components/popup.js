@@ -15,7 +15,7 @@ function Popoff() {
       <div className="poper">
         <ul>
           <li>
-            There are 2 categories and a total of 20 questions to be answered.
+            There are 2 categories and a total of 30 questions to be answered.
             Please do not click submit or end test unless you are sure of
             submitting
           </li>
@@ -30,7 +30,9 @@ function Popoff() {
         </ul>
       </div>
       <Link to="/exam">
-        <button className="butn">Start Test</button>
+        <button className="butn" onClick={closePop}>
+          Start Test
+        </button>
       </Link>
     </div>
   );
