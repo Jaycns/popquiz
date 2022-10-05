@@ -16,7 +16,7 @@ export default function Pully() {
     return () => clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+ 
   return (
     <div className="boxes">
       <div className="bax">

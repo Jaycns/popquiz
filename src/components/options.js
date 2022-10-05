@@ -15,8 +15,9 @@ export default function SelectOptions({ trop }) {
       const newTrop = newList[index];
       newTrop.selectedAnswer = e.target.value;
     },
-    [trop.id, setAnswer]
+    [trop, setAnswer]
   );
+  
   return (
     <>
       <div className="pots">

@@ -47,6 +47,9 @@ export function AppProvider(props) {
     setPops(false);
   };
   const handleCloseThankPop = () => setThankPops(false);
+  const score = questions.filter(
+    (items) => items.answer === items.selectedAnswer
+  ).length;
   const phoneMedia = window.matchMedia("(max-width: 768px)").matches;
   const stateActions = {
     handlePrev,
@@ -75,6 +78,7 @@ export function AppProvider(props) {
         phoneMedia,
         thankPops,
         pops,
+        score,
         ...stateActions,
       }}
     >
