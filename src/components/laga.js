@@ -7,8 +7,21 @@ export default function Laga() {
   const d = new Date();
   const hours = d.getHours();
   const minutes = d.getMinutes();
+  const stopTime = (minutes + 20).toString();
+  const stopHour =
+    stopTime[0] === "6" ? hours + 1 : stopTime[0] === "7" ? hours + 1 : hours;
+
   const start = [hours, minutes].join(":");
-  const stop = [hours, minutes + 20].join(":");
+
+  const tempMin =
+    stopTime[0] === "6"
+      ? stopTime.replace("6", "0")
+      : stopTime[0] === "7"
+      ? stopTime.replace("7", "1")
+      : stopTime;
+  const endTime = Number(tempMin);
+  console.log({ mins: tempMin });
+  const stop = [stopHour, endTime].join(":");
   const { handleOpen } = useContext(AppContext);
   return (
     <div className="lagobox">
