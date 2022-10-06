@@ -22,7 +22,7 @@ function Form() {
         <input
           type="number"
           required="matric no"
-          placeholder="Enter matric no e.g MSQ100L20"
+          placeholder="Enter pin (numbers only)"
         />
 
         <div className="btn" onClick={openPop}>

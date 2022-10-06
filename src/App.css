@@ -430,6 +430,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .sag span {
   color: rgb(255, 223, 90);
   font-weight: 600;
+  text-decoration: line-through;
 }
 .las {
   background: rgba(255, 223, 90, 0.7);
@@ -603,12 +604,35 @@ input[type="number"]::-webkit-inner-spin-button {
   .btn:hover {
     padding: 0.1rem 1rem;
   }
+  .btn-holder {
+    margin-left: -12rem;
+    text-align: left;
+  }
   .butn {
     padding: 0.8rem 1.4rem;
     font-size: 14px;
     margin-left: 0;
     position: relative;
     left: 75%;
+  }
+  .btns {
+    font-size: 13px;
+    width: 12rem;
+  }
+}
+@media (max-width: 1100px) {
+  .bax {
+    margin: 0;
+    border-radius: 0;
+  }
+  .box {
+    border-radius: 0;
+  }
+  .lagobox {
+    border-radius: 0;
+  }
+  .ent {
+    display: none;
   }
 }
 @media screen and (max-width: 900px) {
