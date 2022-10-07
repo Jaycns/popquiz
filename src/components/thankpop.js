@@ -5,7 +5,7 @@ import passport from "../images/passport.png";
 import AppContext from "../context/context";
 
 function ThankPop() {
-  const { handleCloseThankPop, score } = useContext(AppContext);
+  const { handleCloseThankPop, score, time } = useContext(AppContext);
   return (
     <>
       <div className="blur"></div>
@@ -15,7 +15,8 @@ function ThankPop() {
         </div>
         <div className="poper end">
           <p>
-            Thank you for participating in our exam. You scored {score}.{" "}
+            {time <= 0 ? <span>Hey! You ran out of time.</span> : ""}Thank you
+            for participating in our exam. You scored {score}.{" "}
             {score >= 20 ? (
               <span>Congrats! You could be a genius</span>
             ) : (

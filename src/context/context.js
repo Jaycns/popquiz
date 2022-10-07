@@ -1,4 +1,4 @@
-import React, { createContext, useState, useCallback } from "react";
+import React, { createContext, useState, useCallback, useEffect } from "react";
 import questions from "../components/questions";
 const AppContext = createContext();
 export function AppProvider(props) {
@@ -50,6 +50,16 @@ export function AppProvider(props) {
   const score = questions.filter(
     (items) => items.answer === items.selectedAnswer
   ).length;
+  const [time, setTime] = useState(20);
+  const handleTime = () => {
+    if (time !== 0) setTime((prev) => prev - 1);
+  };
+  useEffect(() => {
+    const timer = setInterval(handleTime, 60000);
+    return () => clearInterval(timer);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const phoneMedia = window.matchMedia("(max-width: 768px)").matches;
   const stateActions = {
     handlePrev,
@@ -79,6 +89,7 @@ export function AppProvider(props) {
         thankPops,
         pops,
         score,
+        time,
         ...stateActions,
       }}
     >

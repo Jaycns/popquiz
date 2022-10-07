@@ -1,29 +1,18 @@
-import { React, useState, useContext, useEffect } from "react";
+import { React, useContext } from "react";
 import "../App.css";
 import SelectOptions from "./options";
 import AppContext from "../context/context";
 import Pagination from "./pagination";
 
 export default function Pully() {
-  const { currentPage, oneQuestion, handlePrev, handleNext } =
+  const { currentPage, oneQuestion, handlePrev, handleNext, time } =
     useContext(AppContext);
-  const [time, setTime] = useState(20);
-  const handleTime = () => {
-    if (time > 0) setTime((prev) => prev - 1);
-  };
-  useEffect(() => {
-    const timer = setInterval(handleTime, 60000);
-    return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
- 
+
   return (
     <div className="boxes">
       <div className="bax">
         <div className="baxie">
-          <p>
-            Time-left: <span>{time}</span>min(s)
-          </p>
+          <p>Time-left: {time < 0 ? "0" : <span>{time}</span>}min(s)</p>
         </div>
         <div className="boxie">
           <h1>Question </h1>

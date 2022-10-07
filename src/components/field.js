@@ -14,10 +14,10 @@ import ThankPop from "./thankpop";
 import AppContext from "../context/context";
 
 function Field() {
-  const { thankPops, pops } = useContext(AppContext);
+  const { thankPops, pops, time } = useContext(AppContext);
   return (
     <>
-      {thankPops && <ThankPop />}
+      {thankPops || (time <= 0 && <ThankPop />)}
       {pops && <EndPop />}
       <div className="ent">
         <img src={circle} className="mg1" alt="my little pic" />
