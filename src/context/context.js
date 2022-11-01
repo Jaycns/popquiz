@@ -55,7 +55,7 @@ export function AppProvider(props) {
     if (time !== 0) setTime((prev) => prev - 1);
   };
   useEffect(() => {
-    const timer = setInterval(handleTime, 60000);
+    const timer = setInterval(handleTime, 1000);
     return () => clearInterval(timer);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
